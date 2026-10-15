@@ -15,7 +15,7 @@ Los **conectores** y las **skills de claude.ai** no van aquí: viajan con tu cue
 
 ## Instalar en un PC nuevo
 
-Requisitos: Claude Code, Node.js, Git y acceso a este repo privado (por ejemplo, con `gh auth login`).
+Requisitos: Claude Code, Node.js y Git.
 
 ```powershell
 git clone https://github.com/Parabellam/claude-toolkit.git
