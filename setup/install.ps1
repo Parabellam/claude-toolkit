@@ -15,6 +15,8 @@ Step 'RTK (recorta la salida de comandos para ahorrar tokens)'
 if (Has 'rtk') { Write-Host 'Ya instalado.' }
 elseif (Has 'winget') { winget install --id rtk-ai.rtk -e --accept-source-agreements --accept-package-agreements }
 else { Write-Host 'No hay winget: instala RTK a mano (https://github.com/rtk-ai/rtk). El plugin funciona sin él.' -ForegroundColor Yellow }
+$env:Path = [Environment]::GetEnvironmentVariable('Path', 'Machine') + ';' + [Environment]::GetEnvironmentVariable('Path', 'User')
+if (Has 'rtk') { rtk init -g --auto-patch }
 
 Step 'graphify (grafo de conocimiento del código)'
 if (Has 'graphify') { Write-Host 'Ya instalado.' }

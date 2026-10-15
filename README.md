@@ -6,10 +6,11 @@ Mi configuración de Claude Code, portable a cualquier PC.
 
 | Pieza | Qué hace |
 |---|---|
-| Plugin `stive-toolkit` | Reglas globales (idioma español, calidad de código, RTK) inyectadas en cada sesión |
+| Plugin `stive-toolkit` | Reglas globales (idioma español, calidad de código) inyectadas en cada sesión |
 | Quality gate (hook Stop) | Al terminar cada turno ejecuta typecheck, lint, Knip y clippy/fmt sobre los archivos cambiados. Bloquea solo si hay errores en lo que cambió Claude |
-| Hook de RTK | Recorta la salida de los comandos para ahorrar tokens (si RTK está instalado) |
-| `setup/install.*` | Instala RTK, graphify, superpowers, context7 y este plugin |
+| `setup/install.*` | Instala y configura RTK (`rtk init -g`), graphify, superpowers, context7 y este plugin |
+
+RTK no va dentro del plugin: se configura con su propio `rtk init -g`, que es su forma oficial y evita avisos de "No hook installed".
 
 Los **conectores** y las **skills de claude.ai** no van aquí: viajan con tu cuenta al iniciar sesión.
 

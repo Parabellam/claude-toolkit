@@ -1,7 +1,7 @@
 {
   "name": "stive-toolkit",
-  "version": "1.0.0",
-  "description": "Reglas globales (idioma, calidad, RTK), quality gate al terminar cada turno y hook de RTK.",
+  "version": "1.1.0",
+  "description": "Reglas globales (idioma y calidad) y quality gate al terminar cada turno.",
   "author": {
     "name": "Parabellam"
   }

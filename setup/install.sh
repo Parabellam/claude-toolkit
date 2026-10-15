@@ -15,6 +15,7 @@ if has rtk; then echo 'Ya instalado.'
 elif has brew; then brew install rtk || echo 'Instala RTK a mano: https://github.com/rtk-ai/rtk'
 else echo 'Instala RTK a mano: https://github.com/rtk-ai/rtk (el plugin funciona sin él).'
 fi
+has rtk && rtk init -g --auto-patch
 
 step 'graphify (grafo de conocimiento del código)'
 if has graphify; then echo 'Ya instalado.'
