@@ -1,4 +1,4 @@
-# Instala toda la configuración de Claude Code en un PC Windows nuevo.
+﻿# Instala toda la configuración de Claude Code en un PC Windows nuevo.
 # Uso:  powershell -ExecutionPolicy Bypass -File setup\install.ps1
 # Es idempotente: se puede ejecutar varias veces.
 
