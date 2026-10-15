@@ -1,0 +1,15 @@
+{
+  "name": "stive",
+  "owner": {
+    "name": "Parabellam"
+  },
+  "description": "Configuración personal de Claude Code: reglas, quality gate y RTK.",
+  "plugins": [
+    {
+      "name": "stive-toolkit",
+      "source": "./plugins/toolkit",
+      "description": "Reglas globales (idioma, calidad, RTK), quality gate al terminar cada turno y hook de RTK.",
+      "version": "1.0.0"
+    }
+  ]
+}
