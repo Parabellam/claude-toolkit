@@ -8,8 +8,8 @@
     {
       "name": "stive-toolkit",
       "source": "./plugins/toolkit",
-      "description": "Reglas globales (idioma y calidad) y quality gate al terminar cada turno.",
-      "version": "1.1.0"
+      "description": "Reglas globales (idioma, calidad y desarrollo con IA), skills historia y pareja, y quality gate al terminar cada turno.",
+      "version": "1.2.0"
     }
   ]
 }
