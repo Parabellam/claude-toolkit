@@ -6,7 +6,8 @@ Mi configuración de Claude Code, portable a cualquier PC.
 
 | Pieza | Qué hace |
 |---|---|
-| Plugin `stive-toolkit` | Reglas globales (idioma español, calidad de código) inyectadas en cada sesión |
+| Plugin `stive-toolkit` | Reglas globales (idioma español, calidad de código, desarrollo con IA) inyectadas en cada sesión |
+| Skills `historia` y `pareja` | Claude las usa solo, sin `/`: `historia` antes de una funcionalidad nueva (criterios de aceptación, mini plan, fuera de alcance) y `pareja` en código delicado (pagos, auth, borrado de datos…: lista de tests aprobada y ciclos rojo → verde). Adaptadas de [hola-ai](https://github.com/nschurmann/hola-ai) (MIT) |
 | Quality gate (hook Stop) | Al terminar cada turno ejecuta typecheck, lint, Knip y clippy/fmt sobre los archivos cambiados. Bloquea solo si hay errores en lo que cambió Claude |
 | `setup/install.*` | Instala y configura RTK (`rtk init -g`), graphify, superpowers, context7 y este plugin |
 
@@ -28,7 +29,7 @@ En macOS/Linux: `bash setup/install.sh`.
 
 ## Actualizar
 
-1. Edita este repo (reglas en `plugins/toolkit/rules/`, hooks en `plugins/toolkit/hooks/`).
+1. Edita este repo (reglas en `plugins/toolkit/rules/`, skills en `plugins/toolkit/skills/`, hooks en `plugins/toolkit/hooks/`).
 2. Sube la `version` en `plugins/toolkit/.claude-plugin/plugin.json` y en `.claude-plugin/marketplace.json`.
 3. Haz push y, en cada PC: `claude plugin marketplace update stive` y luego `claude plugin update stive-toolkit@stive`.
 
