@@ -6,7 +6,7 @@ Mi configuración de Claude Code, portable a cualquier PC.
 
 | Pieza | Qué hace |
 |---|---|
-| Plugin `stive-toolkit` | Reglas globales (idioma español, calidad de código, desarrollo con IA) inyectadas en cada sesión |
+| Plugin `stive-toolkit` | Reglas globales (idioma español, calidad de código, desarrollo con IA: especificar justo a tiempo, proceso proporcional al tamaño y verificar ejecutando) inyectadas en cada sesión |
 | Skills `historia` y `pareja` | Claude las usa solo, sin `/`: `historia` antes de una funcionalidad nueva (criterios de aceptación, mini plan, fuera de alcance) y `pareja` en código delicado (pagos, auth, borrado de datos…: lista de tests aprobada y ciclos rojo → verde). Adaptadas de [hola-ai](https://github.com/nschurmann/hola-ai) (MIT) |
 | Quality gate (hook Stop) | Al terminar cada turno ejecuta typecheck, lint, Knip y clippy/fmt sobre los archivos cambiados. Bloquea solo si hay errores en lo que cambió Claude |
 | `setup/install.*` | Instala y configura RTK (`rtk init -g`), graphify, superpowers, context7 y este plugin |
